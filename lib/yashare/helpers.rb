@@ -12,7 +12,7 @@ module Yashare
       div = content_tag(:div)
 
       html = [script, Yashare::Widget.new(self, opts)].join("\n")
-      self.raw(html)
+      raw(html)
     end
   end
 end
