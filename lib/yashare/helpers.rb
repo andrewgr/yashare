@@ -9,9 +9,8 @@ module Yashare
         src:     '//yastatic.net/share/share.js'
       )
 
-      div = content_tag(:div)
-
-      html = [script, Yashare::Widget.new(self, opts)].join("\n")
+      widget = Yashare::Widget.new(self, opts)
+      html   = [script, widget].join("\n")
       raw(html)
     end
   end

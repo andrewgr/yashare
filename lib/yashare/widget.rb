@@ -18,14 +18,14 @@ module Yashare
     def render
       attrs = {
         class: 'yashare-auto-init',
-        data: {,
-          yashareQuickServices: services.join(','),
+        data: {
+          yashareQuickServices: Array(services).join(','),
           yashareL10n:          lang,
           yashareType:          type
         }
       }
 
-      attrs[:data][:yashareTheme] = 'counter' if type == 'small'
+      attrs[:data][:yashareTheme] = 'counter' if type.to_s == 'small'
       attrs[:data][:yashareImage] = image     if image.present?
 
       view.content_tag(:div, nil, attrs)
