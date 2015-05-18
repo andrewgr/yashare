@@ -12,7 +12,7 @@ RSpec.describe Yashare::Helpers do
 <div class="yashare-auto-init" data-yashareQuickServices="vkontakte,facebook,twitter,lj" data-yashareL10n="ru" data-yashareType="button"></div>'
       end
 
-      specify { is_expected.to eq(expected) }
+      it { is_expected.to eq(expected) }
     end
 
     context 'services specified' do
@@ -23,7 +23,7 @@ RSpec.describe Yashare::Helpers do
 <div class="yashare-auto-init" data-yashareQuickServices="facebook" data-yashareL10n="ru" data-yashareType="button"></div>'
       end
 
-      specify { is_expected.to eq(expected) }
+      it { is_expected.to eq(expected) }
     end
   end
 end
