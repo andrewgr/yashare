@@ -21,7 +21,7 @@ Or install it yourself as:
 Use `yashare` helper in your view code to add the Yandex Share buttons to the page. Without any parameters, this code
 
     <%= yashare %>
-    
+
 will render this HTML:
 ```HTML
 <script charset="utf-8" type="text/javascript" src="//yastatic.net/share/share.js"></script>
