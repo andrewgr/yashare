@@ -1,6 +1,6 @@
 module Yashare
   class Widget
-    def initialize(view, opts={})
+    def initialize(view, opts = {})
       @view = view
 
       @services = opts.fetch(:services, %w(vkontakte facebook twitter lj))
@@ -16,19 +16,18 @@ module Yashare
     private
 
     def render
-      attrs = {
-        class: 'yashare-auto-init',
-        data: {
-          yashareQuickServices: Array(services).join(','),
-          yashareL10n:          lang,
-          yashareType:          type
-        }
-      }
+      view.content_tag(:div, nil, class: 'yashare-auto-init', data: data_attrs)
+    end
 
-      attrs[:data][:yashareTheme] = 'counter' if type.to_s == 'small'
-      attrs[:data][:yashareImage] = image     if image.present?
-
-      view.content_tag(:div, nil, attrs)
+    def data_attrs
+      {
+        yashareQuickServices: Array(services).join(','),
+        yashareL10n: lang,
+        yashareType: type
+      }.tap do |data|
+        data[:yashareTheme] = 'counter' if type.to_s == 'small'
+        data[:yashareImage] = image     if image.present?
+      end
     end
 
     attr_reader :view, :type, :services, :image, :lang
