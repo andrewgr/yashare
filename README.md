@@ -1,5 +1,10 @@
 # YaShare
 
+[![Build Status](https://travis-ci.org/andrewgr/yashare.png)](https://travis-ci.org/andrewgr/yashare)
+[![Code Climate](https://codeclimate.com/github/andrewgr/yashare/badges/gpa.svg)](https://codeclimate.com/github/andrewgr/yashare)
+[![Test Coverage](https://codeclimate.com/github/andrewgr/yashare/badges/coverage.svg)](https://codeclimate.com/github/andrewgr/yashare/coverage)
+[![Gem Version](https://badge.fury.io/rb/yashare.svg)](http://badge.fury.io/rb/yashare)
+
 An Action View helper to add Yandex Share buttons to your Rails App.
 
 ## Installation
