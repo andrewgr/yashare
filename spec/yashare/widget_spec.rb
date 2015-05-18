@@ -18,13 +18,27 @@ RSpec.describe Yashare::Widget do
       it { is_expected.to eq(expected) }
     end
 
-    context 'services specified' do
+    context 'one service specified' do
       subject { described_class.new(view, services: 'vkontakte').to_s }
 
       let(:expected) do
         '<div
           class="yashare-auto-init"
           data-yashareQuickServices="vkontakte"
+          data-yashareL10n="ru"
+          data-yashareType="button"></div>'.gsub(/\s+/, ' ')
+      end
+
+      it { is_expected.to eq(expected) }
+    end
+
+    context 'services specified' do
+      subject { described_class.new(view, services: ['vkontakte', 'lj']).to_s }
+
+      let(:expected) do
+        '<div
+          class="yashare-auto-init"
+          data-yashareQuickServices="vkontakte,lj"
           data-yashareL10n="ru"
           data-yashareType="button"></div>'.gsub(/\s+/, ' ')
       end
