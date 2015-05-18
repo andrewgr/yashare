@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO
+<script charset="utf-8" type="text/javascript" src="//yastatic.net/share/share.js"></script>
+<div class="yashare-auto-init" data-yashareQuickServices="vkontakte,facebook,twitter,lj" data-yashareL10n="ru" data-yashareType="button"></div>
+
 
 ## Contributing
 
